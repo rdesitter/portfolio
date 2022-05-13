@@ -57,11 +57,11 @@ const Slider = ({liste}) => {
     }
 
     return (
-        <div className="slider" id="slider" onWheel={handleWheel}>
+        <main className="slider" id="slider" onWheel={handleWheel}>
             <SliderNav onNavClick={updateSlide} />
                 {portfolioListData.map((item) => <SliderItem key={item.id} details={item} />)            
             }
-        </div>
+        </main>
     );
 };
 
