@@ -1,0 +1,73 @@
+.gslider--skills {
+    z-index: 5;
+    //z-index: 15;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $light;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            font-family: "Oswald", sans-serif;
+            font-size: 32px;
+            color: $title-color;
+            margin-bottom: 10px;
+
+            &--highlight {
+                color: $blue;
+            }
+        }
+
+        &__subtitle {
+            color: $text-color;
+            font-style: 16px;
+            margin-bottom: 55px;
+
+            &--bold {
+                font-weight: bold;
+            }
+        }
+
+        &__details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 80px;
+
+            &__item {
+                margin-bottom: 55px;
+
+                .item {
+                    &__title  {
+                        font-family: 'Oswald';
+                        font-size: 24px;
+                    }
+
+                    &__range {
+                        height: 4px;
+                        width: 100%;
+                        background: $light-grey;
+
+                        &__count {
+                            background: $blue;
+                            height: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

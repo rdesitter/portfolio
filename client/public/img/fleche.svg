@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.546" height="16.932" viewBox="0 0 13.546 16.932">
+  <g id="logo" data-name="logo" transform="translate(0.003)">
+    <path id="bottom" d="M7.669,101.975h2.367l1.226,1.226H6.443Z" transform="translate(-5.22 -86.269)" fill="#a9a8a8"/>
+    <path id="top" d="M10.036,1.226H7.669L6.443,0h4.82Z" transform="translate(-5.22)" fill="#a9a8a8"/>
+    <path id="back" d="M26.262,0l-.927,1.007L32.2,8.466l-6.869,7.459.927,1.007,7.8-8.466Z" transform="translate(-20.519 0)" fill="#cdcdcd"/>
+    <path id="front" d="M.924,0,0,1.007,6.865,8.466,0,15.925l.927,1.007L8.719,8.466Z" transform="translate(0 0)" fill="#fff"/>
+  </g>
+</svg>

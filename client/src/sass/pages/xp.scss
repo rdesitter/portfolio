@@ -1,0 +1,90 @@
+.gslider--xp {
+    z-index: 7;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $light;
+
+    .container {
+        display: flex;
+    }
+
+    .xp {
+        &__count {
+            &__number {
+                color: $blue;
+                font-size: 120px;
+                font-weight: bold;
+                display: flex;
+
+                sup {
+                    font-size: 30px;
+                }
+            }
+            &__text {
+                font-family: 'Oswald', sans-serif;
+                font-size: 22px;
+                font-weight: bold;
+                color: $title-color;
+            }
+        }
+
+        &__detail {
+            padding-left: 50px;
+            &__intro {
+                font-family: 'Oswald', sans-serif;
+                font-size: 32px;
+                color: $title-color;
+                margin-bottom: 40px;
+
+                &--highlight {
+                    color: $blue;
+                }
+            }
+            &__container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 20px;
+            }
+            &__card {
+                margin-bottom: 40px;
+                &--title {
+                    font-family: 'Oswald', sans-serif;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: $title-color;
+                    margin-bottom: 10px ;
+
+                    &:hover{color: $blue;}
+                }
+                &--text {
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $text-color;
+                    margin-bottom: 10px;
+                }
+                &--link {
+                    text-decoration: none;
+                    color: $text-color;
+                    cursor: pointer;
+                    display: block;
+                    &::after {
+                        content: "🡒";
+                        opacity: 0;
+                    }
+                    &:hover{
+                        color: $blue;
+                        
+                        &::after{
+                            opacity: 1;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}

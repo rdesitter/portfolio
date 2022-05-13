@@ -1,0 +1,211 @@
+.load {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    min-height: 100%;
+    background: #ffffff;
+
+    &.show {
+        display: block;
+    }
+}
+
+.close {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: all linear 0.3s;
+    top: 20px;
+    right: 5px;
+    z-index: 99;
+    border-radius: 50%;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background: $light-grey;
+        left: 7px;
+        transition: all linear 0.3s;
+        transform: rotate(-45deg);
+        top: 13px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background: $light-grey;
+        left: 7px;
+        transition: all linear 0.3s;
+        transform: rotate(45deg);
+        top: 13px;
+    }
+}
+
+.project {
+
+    &.light {
+        background: $light;
+        color: $black;
+    }
+    &.dark {
+        background: $black;
+        color: $light-grey;
+    }
+
+    &.project--ballman {
+        background: $ballman-dark;
+    }
+    
+    display: flex;
+    flex-direction: column;
+
+    &__section {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 100px 0 ;
+    }
+    &__banner {
+        width: 100%;
+        min-height: 100%;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+        padding: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and(max-width: 900px) {
+            min-height: 0;
+            
+            flex-direction: column;
+        }
+        
+        &--ballman {
+            background: #141326;
+            background: #141326 url(../../img/slider/slide-4.jpg);
+            background-position-y: bottom;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        &__image {
+            width: 27vw;
+            z-index: 1;
+            margin-right: 0px;
+            transition: all linear 0.3s;
+            align-self: center;
+
+            @media screen and(max-width: 900px) {
+                width: auto;
+               
+            }
+
+            img {
+                max-height: 70vh;
+                @media screen and(max-width: 900px) {
+                    width: auto;
+                    max-height: 50vh;
+                }
+            }
+        }
+
+        &__title {
+            font-family: "Oswald", sans-serif;
+            font-size: calc(6rem + 1vw);
+            line-height: calc(6rem + 1vw);
+            text-transform: uppercase;
+
+            &[data-color='light']{
+                color: $black;
+            }
+
+            &[data-color='dark']{
+                color: $light;
+            }
+
+            @media screen and(max-width: 900px) {
+                font-size: calc(3rem + 1vw);
+                line-height: calc(3rem + 1vw);
+            }
+        }
+    }
+
+    &__title {
+        font-family: "Oswald", sans-serif;
+        font-size: calc(3rem + 1vw);
+        line-height: calc(3rem + 1vw);
+        text-transform: uppercase;
+        color: $title-color;
+        margin-bottom: 30px;
+
+        &[data-color='light']{
+            color: $black;
+        }
+
+        &[data-color='dark']{
+            color: $light;
+        }
+
+        &[data-color='pink']{
+            color: $ballman-pink;
+        }
+
+        &[data-color='yellow']{
+            color: $ballman-yellow;
+        }
+    }
+
+    &__transition {
+        height: 300px;
+        height: 27vw;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+
+        &--ballman {
+            background: #141326;
+
+            &::before{
+                z-index: 2;
+                position: absolute;
+                top: -14px;
+                width: 100%;
+                height: 14px;
+                content: "";
+                display: block;
+                background: url(../../img/frise-bas.svg) repeat-x bottom left;
+            }
+
+            &::after{
+                z-index: 2;
+                position: absolute;
+                bottom: -14px;
+                width: 100%;
+                height: 14px;
+                content: "";
+                display: block;
+                background: url(../../img/frise-haut.svg) repeat-x bottom left;
+            }
+        }
+
+        &__image {
+            z-index: 10;
+            max-height: 350px;
+            max-height: 35vw;
+        }
+    }
+}

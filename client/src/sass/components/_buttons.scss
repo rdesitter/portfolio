@@ -1,0 +1,16 @@
+.button {
+    font-style: 24px;
+    font-weight: bold;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    &--outline {
+
+    }
+    &--blue {
+        color: $light;
+        background: $blue;
+        box-shadow: 0 4px 0 #0F459D;
+    }
+}

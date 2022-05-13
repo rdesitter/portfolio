@@ -1,0 +1,52 @@
+.gslider--portfolio {
+    z-index: 4;
+    //z-index: 15;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $black;
+
+}
+
+.portfolio {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $light;
+    overflow: hidden;
+
+    &__navigation {
+        &__next, &__prev {
+            position: absolute;
+            z-index: 9;
+        }
+        &__next {
+            right: 0;
+        }
+        &__prev {
+            left: 0;
+        }
+    }
+
+    &__inner {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        white-space: nowrap;
+        transition: transform linear 0.3s;
+    }
+
+    &__item {
+        height: 100%;
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
